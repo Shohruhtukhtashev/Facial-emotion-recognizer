@@ -37,3 +37,7 @@ pip install mediapipe
 pip install opencv-python
 pip install numpy
 ```
+# Example
+
+https://github.com/Shohruhtukhtashev/Facial-emotion-recognizer/assets/87192481/11e09f6a-b071-44c5-8d28-3c0573cf4eeb
+
