@@ -8,6 +8,8 @@ from mediapipe import solutions
 from mediapipe.framework.formats import landmark_pb2
 import numpy as np
 import matplotlib.pyplot as plt
+import argparse
+from pathlib import Path
 
 
 def draw_landmarks_on_image(rgb_image, detection_result):
@@ -89,10 +91,19 @@ options = FaceLandmarkerOptions(
 detector = vision.FaceLandmarker.create_from_options(options)
 
 
+# Argument parser for videocapture
+parser = argparse.ArgumentParser()
+parser.add_argument('-f', "--file_path", type=Path)
+p = parser.parse_args()
+if str(p.file_path) == 'cam':
+    pth = 0
+else:
+    pth = p.file_path
+
 
 cv2.namedWindow("Image", cv2.WINDOW_NORMAL) 
 start_time = time.time()
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(pth)
 
 # All our execution goes into this loop
 while cap.isOpened():
