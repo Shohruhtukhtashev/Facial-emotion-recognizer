@@ -33,10 +33,27 @@ pip install mediapipe
 pip install opencv-python
 pip install numpy
 ```
+
 ## Usage
+### Working in the terminal
+1. Below is the code to use camera
+  ```
+  python main.py -f cam
+  ```
+  or
+  ```
+  python main.py --file_path cam
+  ```
+2. Below are the codes to get the video file from the path
+  ```
+  python main.py -f video_file_path
+  ```
+  or
+  ```
+  python main.py --file_path video_file_path
+  ```
 
 ## Example
-
 https://github.com/Shohruhtukhtashev/Facial-emotion-recognizer/assets/87192481/11e09f6a-b071-44c5-8d28-3c0573cf4eeb
 
 ## References
